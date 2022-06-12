@@ -1,6 +1,6 @@
 const model = require("../model/contact");
 
-exports.GetData = async (req, res, next) => {
+exports.GetData = async (req, res) => {
   try {
     var result = await model.getList();
     return res.status(200).json({
