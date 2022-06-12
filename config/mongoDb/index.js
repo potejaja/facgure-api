@@ -9,7 +9,7 @@ const cluster = config.mdb_cluster;
 
 //let uri = `mongodb+srv://${username}:${password}@${cluster}/pets?retryWrites=true&w=majority`;
 //let uri = `mongodb+srv://${username}:${password}@${cluster}/${dbName}?retryWrites=true&w=majority`;
-const uri = `mongodb+srv://${username}:${password}@facguredb.bylbcxm.mongodb.net/?retryWrites=true&w=majority`;
+const uri = `mongodb+srv://${username}:${password}@${cluster}/?retryWrites=true&w=majority`;
 const client = new MongoClient(uri, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
