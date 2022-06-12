@@ -22,7 +22,7 @@ exports.find = async (collName) => {
     const database = client.db(dbName);
     const ratings = database.collection(collName);
     const result = await ratings.find().toArray();
-    //client.close();
+    client.close();
     return result;
   } catch (ex) {
     throw ex;
